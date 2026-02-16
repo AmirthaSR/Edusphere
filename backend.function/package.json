@@ -1,0 +1,9 @@
+{
+  "name": "edusphere-functions",
+  "version": "1.0.0",
+  "description": "Azure Functions backend for EduSphere",
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {}
+}
