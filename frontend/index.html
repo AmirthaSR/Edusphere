@@ -105,11 +105,17 @@
 <script>
 async function checkBackend() {
     try {
-        const response = await fetch("http://localhost:3000/api/test");
+        const response = await fetch("/api/test");
+
+        if (!response.ok) {
+            throw new Error("Network response not ok");
+        }
+
         const data = await response.json();
         document.getElementById("result").innerText = data.message;
-    } catch {
+    } catch (error) {
         document.getElementById("result").innerText = "Backend not reachable";
+        console.error(error);
     }
 }
 </script>
